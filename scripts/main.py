@@ -22,6 +22,8 @@ class Gui:
             [sg.Input(), sg.FileBrowse()],
             [sg.Text("Choose output location:")],
             [sg.Input(), sg.FolderBrowse()],
+            [sg.Text("Plot cutoff"), sg.InputText("10")],
+            [sg.Text("Zipf cutoff"), sg.InputText("100")],
             [sg.Submit(), sg.Cancel()]
         ]
 
@@ -34,7 +36,7 @@ class Gui:
             if event in (None, "Cancel"):
                 break
             if event == "Submit":
-                self.al_sort(values[0], values[1])
+                self.al_sort(path=values[0], path_save=values[1], plot_cutoff=values[2], z_cutoff=values[3])
                 break
 
         window.close()

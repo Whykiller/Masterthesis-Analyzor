@@ -1,0 +1,14 @@
+TMDCs are 2D materials that have an inherent trilayer structure, which consists of one transitions metal layer e.g. Molybdenum (Mo), Tungsten (W), and two chalcogenide layer e.g. Selenum (Se), Sulfur (S). From here on out one such trilayer is referred to as Monolayer. The in experiments most often used combinations are \ch{MoS2}, \ch{MoSe2}, \ch{WSe2} and \ch{WSe2}, due to the fact that they show semiconduting properties. From now on we write \ch{MoX2}, where Mo is a metal and X is a chalcogenide. The TMDCs have been first described by the chemist Linus Pauling in 1923, who also showed that the TMDCs posses a hexogonal crystal structure.\cite{Dickinson1923} The TMDC trilayer are covalently bound by van-der Waals forces, which (as we will see in chapter \ref{SubSec31}) accounts for the possibility of easily seperating them with a tape based exfoliation technique. In bulk they occur in two different stacking orders, the hexagonal 2H or the rhombohedral 3R. Naturally occuring \ch{MoX2} crystals usually have the 2H stacking.\cite{Lee2015}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=6cm]{Chapter/Chapter2/Einheitszelle.png}
+	\caption{Unit cell of \ch{MoX2} for either 2H or 3R stacking order}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=8cm]{Chapter/Chapter2/Seitenansicht_MoX2.png}
+	\caption{Side view of a TMDC-Monolayer in 2H stacking order, where the grey atoms are the metals Mo and yellow are the chalcogenides X}
+\end{figure}
+

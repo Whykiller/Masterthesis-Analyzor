@@ -25,21 +25,9 @@ class AlphabeticSort:
         self.text, self.formatted, self.chars = "", "", ""
         self.bar_width = 0.35
 
-        # Gets the value for cutoff
-
-        self.cutoff_checker = 10
-        self.cond = True
-
         try:
             self.cutoff = int(plot_cutoff)
             self.z_cut = int(z_cutoff)
-
-            while self.cond:
-                if self.cutoff_checker < self.cutoff:
-                    self.cond = False
-                    break
-                self.bar_width += 0.35
-                self.cutoff_checker += 10
 
         except ValueError as e:
             self.log.log(e)
@@ -150,16 +138,15 @@ class AlphabeticSort:
         """Plots the list in form of a scatter plot and saves it"""
 
         # Plots the 10 most common occurrences of words
+
         for i in self.counting()[0].most_common(plot_n):
             self.labels.append(i[0])
             self.values.append(i[1])
 
-        # Sort your values in descending order
-        self.indsort = np.argsort(self.values)[::-1]
-
         # Rearrange your data
-        self.labels = np.array(self.labels)[self.indsort]
-        self.values = np.array(self.values)[self.indsort]
+
+        self.labels = np.array(self.labels)
+        self.values = np.array(self.values)
 
         self.indexes = np.arange(len(self.labels))
 
@@ -182,6 +169,7 @@ class AlphabeticSort:
         """This checks if the words in the text are distributed according to zipfs law"""
         # Saves the plot
         self.p.savefig(os.path.join(self.path_save, "zipfs_distribution" + ".png"))
+
 
 if __name__ == "__alphabetic_sort__":
     pass

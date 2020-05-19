@@ -21,12 +21,14 @@ class Logger:
                 f.write(f"Logger initialized at {datetime.datetime.now()}\n")
                 f.close()
 
-
-
     def log(self, message,):
         with open(self.path_logger, "a") as f:
             f.write(f"{datetime.datetime.now()}: {message}\n")
             f.close()
+
+
+if __name__ == "__logger__":
+    pass
 
 
 

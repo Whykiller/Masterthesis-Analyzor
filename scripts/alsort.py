@@ -1,5 +1,5 @@
 import collections
-from scipy import special
+from scipy
 import matplotlib.pyplot as plt
 import numpy as np
 import os.path
@@ -61,7 +61,6 @@ class AlphabeticSort:
         self.create_folder()
 
         # Saves the plots and the data
-
         self.save()
 
     def save(self):
@@ -96,7 +95,6 @@ class AlphabeticSort:
         self.date = f"{self.date_y}{self.date_m}{self.date_d}"
 
         # Gets the time and sets the right format
-
         self.time_h = datetime.datetime.now().hour
         self.time_m = datetime.datetime.now().minute
         self.time_s = datetime.datetime.now().second
@@ -154,6 +152,7 @@ class AlphabeticSort:
 
         # Add labels
         self.p.xticks(self.indexes + self.bar_width, self.labels)
+
         # Saves the plot
         self.p.savefig(os.path.join(self.path_save, "most_common_words" + ".png"))
 
@@ -167,6 +166,9 @@ class AlphabeticSort:
 
     def zipfs_law(self, zipf_n):
         """This checks if the words in the text are distributed according to zipfs law"""
+
+        self.zipf_x = np.array(0, 50, dtype=int)
+
         # Saves the plot
         self.p.savefig(os.path.join(self.path_save, "zipfs_distribution" + ".png"))
 
